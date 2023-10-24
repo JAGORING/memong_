@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import MainTop from './components/MainTop';
 import CardCarousel from './components/CardCarousel';
+import StorySection from './components/StorySection';
 function App() {
   const [screenSize, setScreenSize] = useState({ width: window.innerWidth, height: window.innerHeight });
 
@@ -25,6 +26,7 @@ function App() {
       <Header />
       <MainTop />
       <CardCarousel />
+      <StorySection />
     </>
   );
 }

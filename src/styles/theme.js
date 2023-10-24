@@ -6,6 +6,7 @@ const breakpoints = {
 
 const theme = {
   whiteColor: '#FFFFFF',
+  StoryBoxBackgroudColor: '#F2F2F2',
   adBanner1Color: '#0F59F4',
   adBanner2Color: '#44B089',
   banner1BlueTextColor: '#B7E5FF',
@@ -15,6 +16,9 @@ const theme = {
   mainH4GrayColor: '#717C8A',
   CarouselBackgroudColor: '#f6f6f6de',
   CarouselCardColor: '#303535',
+  StoryGrayColor: '#C8D3E1',
+  StoryGray2Color: '#B7C6D9',
+  StoryGray3Color: '#9A9A9A',
 };
 
 export default theme;
