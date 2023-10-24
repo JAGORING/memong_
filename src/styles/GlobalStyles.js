@@ -2,6 +2,13 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 
 const GlobalStyles = createGlobalStyle`
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
     ${reset}
     a{
         text-decoration: none;
@@ -9,8 +16,9 @@ const GlobalStyles = createGlobalStyle`
     }
     *{
         box-sizing: border-box;
-        -ms-overflow-style: none; /* 인터넷 익스플로러 */
-        scrollbar-width: none; /* 파이어폭스 */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        
     }
     ::-webkit-scrollbar {
         display: none;
@@ -20,13 +28,14 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         border: 0;
-        font-size: 10px;
+        font-size: 14px;
         vertical-align: baseline;
     }
     body{
+        font-family: "Pretendard-Regular", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
         line-height: 1;
-        font-family: 'Noto Sans KR', sans-serif;
-        background-color: #F6F9F0;
+        vertical-align: baseline;
+        background-color: #FFFFFF;
         margin-bottom: 100px;
     }
     ol, ul{
@@ -36,6 +45,7 @@ const GlobalStyles = createGlobalStyle`
         border: 0;
         background: transparent;
         cursor: pointer;
+        font-family: "Pretendard-Regular", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     }
     #root {
         width: calc(var(--vw, 1vw) * 100);

@@ -1,16 +1,17 @@
 const breakpoints = {
-  small: '@media (max-width: 639px)',
-  medium: '@media (max-width: 1047px)',
-  large: '@media (min-width: 1048px)',
+  small: '@media (max-width: 767px)',
+  medium: '@media (max-width: 1199px)',
+  large: '@media (min-width: 1200px)',
 };
 
 const theme = {
-  mainColor: '#6ABD8C',
-  mainColorLight: '#CCDFB0',
-  backgroundColor: '#F6F9F0',
-  darkGray: '#595959',
-  lightGray: '#939292',
-  superLightGray: '#F1F2F5',
+  whiteColor: '#FFFFFF',
+  adBanner1Color: '#0F59F4',
+  adBanner2Color: '#44B089',
+  banner1BlueTextColor: '#B7E5FF',
+  banner1YellowTextColor: '#FFE766',
+  purpleBtnColor: '#532FD0',
 };
 
 export default theme;
+export { breakpoints };

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import TestCom from './TestCom';
+import Header from './components/Header';
 
 function App() {
   const [screenSize, setScreenSize] = useState({ width: window.innerWidth, height: window.innerHeight });
@@ -19,7 +20,12 @@ function App() {
     _setScreenSize();
   }, [screenSize]);
 
-  return <TestCom />;
+  return (
+    <>
+      <Header />
+      <TestCom />
+    </>
+  );
 }
 
 export default App;
