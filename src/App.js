@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import TestCom from './TestCom';
 import Header from './components/Header';
+import MainTop from './components/MainTop';
 
 function App() {
   const [screenSize, setScreenSize] = useState({ width: window.innerWidth, height: window.innerHeight });
@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       <Header />
-      <TestCom />
+      <MainTop />
     </>
   );
 }

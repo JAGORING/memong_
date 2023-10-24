@@ -11,6 +11,8 @@ const theme = {
   banner1BlueTextColor: '#B7E5FF',
   banner1YellowTextColor: '#FFE766',
   purpleBtnColor: '#532FD0',
+  mainH1GrayColor: '#303535',
+  mainH4GrayColor: '#717C8A',
 };
 
 export default theme;
