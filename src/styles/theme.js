@@ -13,6 +13,8 @@ const theme = {
   purpleBtnColor: '#532FD0',
   mainH1GrayColor: '#303535',
   mainH4GrayColor: '#717C8A',
+  CarouselBackgroudColor: '#f6f6f6de',
+  CarouselCardColor: '#303535',
 };
 
 export default theme;
