@@ -3,6 +3,7 @@ import Header from './components/Header';
 import MainTop from './components/MainTop';
 import CardCarousel from './components/CardCarousel';
 import StorySection from './components/StorySection';
+import NewWorldSection from './components/NewWorldSection';
 function App() {
   const [screenSize, setScreenSize] = useState({ width: window.innerWidth, height: window.innerHeight });
 
@@ -27,6 +28,7 @@ function App() {
       <MainTop />
       <CardCarousel />
       <StorySection />
+      <NewWorldSection />
     </>
   );
 }
