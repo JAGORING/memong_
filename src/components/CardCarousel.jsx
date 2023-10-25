@@ -18,30 +18,28 @@ const CardCarousel = () => {
         loop={true}
         modules={[Autoplay]}
         autoplay={{ delay: 0 }}
-        slidesPerView={3.4}
         centeredSlides={true}
         speed={5000}
-        spaceBetween={20}
         breakpoints={{
           260: {
-            slidesPerView: 1.5,
+            slidesPerView: 2,
             spaceBetween: 5,
           },
           360: {
-            slidesPerView: 2.3,
-            spaceBetween: 20,
+            slidesPerView: 2.6,
+            spaceBetween: 10,
           },
           767: {
-            slidesPerView: 1.9,
-            spaceBetween: 25,
+            slidesPerView: 3.5,
+            spaceBetween: 20,
           },
           1200: {
             slidesPerView: 3.4,
             spaceBetween: 10,
           },
           1850: {
-            slidesPerView: 3.4,
-            spaceBetween: 20,
+            slidesPerView: 3.5,
+            spaceBetween: 15,
           },
         }}
       >
@@ -68,37 +66,26 @@ const CarouselContainer = styled.div`
   margin-top: 40px;
   background-color: ${(props) => props.theme.CarouselBackgroudColor};
   padding: 50px 0;
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    &.swiper-slide-active .card {
+      ${breakpoints.large} {
+        width: 500px !important;
+        height: 600px !important;
+      }
+      ${breakpoints.medium} {
+        width: 400px !important;
+        height: 480px !important;
+      }
+      ${breakpoints.small} {
+        width: 200px !important;
+        height: 200px !important;
+      }
+    }
+  }
 `;
-// .center {
-//   .slick-center .card {
-//     ${breakpoints.large} {
-//       width: 500px !important;
-//       height: 600px !important;
-//     }
-//     ${breakpoints.medium} {
-//       width: 400px !important;
-//       height: 480px !important;
-//     }
-//     ${breakpoints.small} {
-//       width: 200px !important;
-//       height: 200px !important;
-//     }
-//   }
-//   .slick-slide:not(.slick-center) .card {
-//     ${breakpoints.large} {
-//       width: 500px !important;
-//       height: 500px !important;
-//     }
-//     ${breakpoints.medium} {
-//       width: 400px !important;
-//       height: 400px !important;
-//     }
-//     ${breakpoints.small} {
-//       width: 160px !important;
-//       height: 160px !important;
-//     }
-//   }
-// }
+
 const Card = styled.div`
   background-color: ${(props) => props.theme.CarouselCardColor};
   box-shadow: 4px 4px 16px 0px #00000024;
