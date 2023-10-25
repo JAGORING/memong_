@@ -27,10 +27,10 @@ const StorySection = () => {
         </div>
         <div className="phone-imgs">
           <div className="front">
-            <img src={Phone_1} alert="story Phone 1" />
+            <img src={Phone_1} alt="story Phone 1" />
           </div>
           <div className="back">
-            <img src={Phone_2} alert="story Phone 2" />
+            <img src={Phone_2} alt="story Phone 2" />
           </div>
         </div>
       </div>
@@ -57,13 +57,30 @@ const SectionBox = styled.section`
   align-items: center;
   justify-content: center;
   padding: 90px 0;
+  ${breakpoints.medium} {
+    padding: 50px 0;
+  }
   .story-title {
     width: 65%;
     margin: 0 auto;
+    ${breakpoints.medium} {
+      width: 100%;
+      padding: 0 30px;
+    }
+    ${breakpoints.small} {
+      margin: 0;
+      padding: 0 20px;
+    }
     h1 {
       font-weight: 900;
-      font-size: 60px;
+      font-size: 3rem;
       color: ${(props) => props.theme.StoryGrayColor};
+      ${breakpoints.medium} {
+        font-size: 2rem;
+      }
+      ${breakpoints.small} {
+        font-size: 26px;
+      }
     }
     h1:nth-child(2) {
       color: ${(props) => props.theme.mainH1GrayColor};
@@ -79,19 +96,34 @@ const SectionBox = styled.section`
   .story-box {
     margin-top: 60px;
     background-color: ${(props) => props.theme.StoryBoxBackgroudColor};
-    width: 1000px;
     border-radius: 22px;
     padding: 40px 30px;
     display: flex;
     flex-direction: row;
+    ${breakpoints.medium} {
+    }
+    ${breakpoints.small} {
+      width: 90%;
+      min-height: 460px;
+      flex-direction: column;
+    }
     align-items: start;
     overflow: hidden;
     .text-group {
       flex: 5.5;
+      ${breakpoints.small} {
+        flex: 1;
+      }
       h4 {
         font-weight: 800;
-        font-size: 48px;
+        font-size: 2rem;
         color: ${(props) => props.theme.StoryGray2Color};
+        ${breakpoints.medium} {
+          font-size: 1.6rem;
+        }
+        ${breakpoints.small} {
+          font-size: 26px;
+        }
       }
       h4:first-of-type {
         margin-bottom: 25px;
@@ -102,16 +134,28 @@ const SectionBox = styled.section`
       }
       p {
         font-weight: 400;
-        font-size: 24px;
+        font-size: 1.8rem;
         color: ${(props) => props.theme.StoryGray3Color};
         margin-top: 35px;
+        ${breakpoints.medium} {
+          font-size: 1.4rem;
+        }
+        ${breakpoints.small} {
+          font-size: 14px;
+        }
       }
     }
     .phone-imgs {
+      display: flex; /* 요소들을 가로로 정렬하기 위해 flex 사용 */
+      justify-content: center; /* 가로 방향 가운데 정렬 */
+      align-items: center; /* 세로 방향 가운데 정렬 */
       flex: 4.5;
       position: relative;
       width: 100%;
       height: 100%;
+      ${breakpoints.small} {
+        flex: 5.5;
+      }
       .back,
       .front {
         position: absolute;
@@ -119,10 +163,22 @@ const SectionBox = styled.section`
         left: 0;
         img {
           width: 248px;
+          ${breakpoints.small} {
+            width: 165px;
+          }
+        }
+      }
+      .back {
+        transform: translateX(100px);
+        ${breakpoints.medium} {
+          transform: translateX(60px);
         }
       }
       .front {
-        transform: translateX(150px);
+        transform: translateX(200px);
+        ${breakpoints.medium} {
+          transform: translateX(160px);
+        }
       }
     }
   }
@@ -132,21 +188,37 @@ const SectionBox = styled.section`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 50px;
+    ${breakpoints.small} {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 40px;
+    }
     .point {
       h5 {
         display: inline-block;
         font-weight: 900;
-        font-size: 36px;
+        font-size: 1.6rem;
         background: linear-gradient(to right, #72a4ff, #7d65fb);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+        ${breakpoints.medium} {
+          font-size: 1.2rem;
+        }
+        ${breakpoints.small} {
+          font-size: 24px;
+        }
       }
       p {
         font-weight: 500;
-        font-size: 20px;
+        font-size: 1.6rem;
         color: ${(props) => props.theme.mainH4GrayColor};
         margin-top: 8px;
+        ${breakpoints.medium} {
+          font-size: 1.2rem;
+        }
+        ${breakpoints.small} {
+          font-size: 16px;
+        }
       }
       p:first-of-type {
         margin-top: 20px;
