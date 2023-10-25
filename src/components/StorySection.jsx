@@ -12,39 +12,41 @@ import DocumemtIcon from '../assets/images/icons/icon-document-mono.png';
 const StorySection = () => {
   return (
     <SectionBox>
-      <div className="story-title">
-        <h1>세상에 하나뿐인 브랜드</h1>
-        <h1>
-          <span className="grd_text">자신만의 이야기</span>를 새기다.
-        </h1>
-      </div>
-      <div className="story-box">
-        <div className="text-group">
-          <h4>나만의 스토리</h4>
-          <h4>미몽으로 포트폴리오를</h4>
-          <h4>만드는 가장 좋은 방법</h4>
-          <p>모델을 구하고, 초상권 계약, 포트폴리오 관리와 모델 관리까지 이 모든 것을 미몽 앱 한 화면에서.</p>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <div className="story-title">
+          <h1>세상에 하나뿐인 브랜드</h1>
+          <h1>
+            <span className="grd_text">자신만의 이야기</span>를 새기다.
+          </h1>
         </div>
-        <div className="phone-imgs">
-          <div className="front">
-            <img src={Phone_1} alt="story Phone 1" />
+        <div className="story-box">
+          <div className="text-group">
+            <h4>나만의 스토리</h4>
+            <h4>미몽으로 포트폴리오를</h4>
+            <h4>만드는 가장 좋은 방법</h4>
+            <p>모델을 구하고, 초상권 계약, 포트폴리오 관리와 모델 관리까지 이 모든 것을 미몽 앱 한 화면에서.</p>
           </div>
-          <div className="back">
-            <img src={Phone_2} alt="story Phone 2" />
-          </div>
-        </div>
-      </div>
-      <div className="story-points">
-        {pointDatas.map((point) => (
-          <div className="point">
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-              <img src={point.icon} alt={point.title} />
-              <h5>{point.title}</h5>
+          <div className="phone-imgs">
+            <div className="front">
+              <img src={Phone_1} alt="story Phone 1" />
             </div>
-            <p>{point.desc1}</p>
-            <p>{point.desc2}</p>
+            <div className="back">
+              <img src={Phone_2} alt="story Phone 2" />
+            </div>
           </div>
-        ))}
+        </div>
+        <div className="story-points">
+          {pointDatas.map((point) => (
+            <div className="point">
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <img src={point.icon} alt={point.title} />
+                <h5>{point.title}</h5>
+              </div>
+              <p>{point.desc1}</p>
+              <p>{point.desc2}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </SectionBox>
   );
@@ -58,22 +60,24 @@ const SectionBox = styled.section`
   justify-content: center;
   padding: 90px 0;
   ${breakpoints.medium} {
-    padding: 50px 0;
+    padding: 50px 10px;
   }
   .story-title {
-    width: 65%;
-    margin: 0 auto;
+    width: 100%;
+    margin-left: -80px;
+
     ${breakpoints.medium} {
       width: 100%;
-      padding: 0 30px;
+      padding-left: 1rem;
+      margin-left: 0px;
     }
     ${breakpoints.small} {
-      margin: 0;
-      padding: 0 20px;
+      padding-left: 10px;
+      line-height: 30px;
     }
     h1 {
       font-weight: 900;
-      font-size: 3rem;
+      font-size: 3.5rem;
       color: ${(props) => props.theme.StoryGrayColor};
       ${breakpoints.medium} {
         font-size: 2rem;
@@ -103,7 +107,6 @@ const SectionBox = styled.section`
     ${breakpoints.medium} {
     }
     ${breakpoints.small} {
-      width: 90%;
       min-height: 460px;
       flex-direction: column;
     }
@@ -116,7 +119,7 @@ const SectionBox = styled.section`
       }
       h4 {
         font-weight: 800;
-        font-size: 2rem;
+        font-size: 2.6rem;
         color: ${(props) => props.theme.StoryGray2Color};
         ${breakpoints.medium} {
           font-size: 1.6rem;
@@ -131,24 +134,30 @@ const SectionBox = styled.section`
       h4:not(:first-of-type) {
         margin-top: 10px;
         color: ${(props) => props.theme.mainH1GrayColor};
+        ${breakpoints.medium} {
+          margin-top: 5px;
+        }
       }
       p {
         font-weight: 400;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+        line-height: 35px;
         color: ${(props) => props.theme.StoryGray3Color};
         margin-top: 35px;
         ${breakpoints.medium} {
           font-size: 1.4rem;
+          line-height: 1.8rem;
         }
         ${breakpoints.small} {
           font-size: 14px;
+          line-height: 16px;
         }
       }
     }
     .phone-imgs {
-      display: flex; /* 요소들을 가로로 정렬하기 위해 flex 사용 */
-      justify-content: center; /* 가로 방향 가운데 정렬 */
-      align-items: center; /* 세로 방향 가운데 정렬 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
       flex: 4.5;
       position: relative;
       width: 100%;
@@ -196,7 +205,7 @@ const SectionBox = styled.section`
       h5 {
         display: inline-block;
         font-weight: 900;
-        font-size: 1.6rem;
+        font-size: 2rem;
         background: linear-gradient(to right, #72a4ff, #7d65fb);
         -webkit-background-clip: text;
         background-clip: text;
@@ -210,11 +219,11 @@ const SectionBox = styled.section`
       }
       p {
         font-weight: 500;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         color: ${(props) => props.theme.mainH4GrayColor};
         margin-top: 8px;
         ${breakpoints.medium} {
-          font-size: 1.2rem;
+          font-size: 1.1rem;
         }
         ${breakpoints.small} {
           font-size: 16px;
