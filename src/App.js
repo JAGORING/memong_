@@ -4,6 +4,16 @@ import MainTop from './components/MainTop';
 import CardCarousel from './components/CardCarousel';
 import StorySection from './components/StorySection';
 import NewWorldSection from './components/NewWorldSection';
+import ExperienceSection from './components/ExperienceSection';
+import HowToUseSection from './components/HowToUseSection';
+import RecruitmentSection from './components/RecruitmentSection';
+import UserViewSection from './components/UserViewSection';
+import Banner from './components/Banner';
+import SharePortfolioSection from './components/SharePortfolioSection';
+import NewMediaSection from './components/NewMediaSection';
+import BeginnerSection from './components/BeginnerSection';
+import Footer from './components/Footer';
+
 function App() {
   const [screenSize, setScreenSize] = useState({ width: window.innerWidth, height: window.innerHeight });
 
@@ -29,6 +39,16 @@ function App() {
       <CardCarousel />
       <StorySection />
       <NewWorldSection />
+      <UserViewSection />
+      <ExperienceSection />
+      <HowToUseSection />
+      <RecruitmentSection />
+      <Banner />
+      <SharePortfolioSection />
+      <NewMediaSection />
+      <BeginnerSection />
+      <Banner />
+      <Footer />
     </>
   );
 }
