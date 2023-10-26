@@ -25,7 +25,6 @@ const UserViewSection = () => {
       </div>
       <SlidePoints>
         <div className="point-slide">
-          <div class="overlay"></div>
           <Swiper
             direction={'vertical'}
             loop={true}

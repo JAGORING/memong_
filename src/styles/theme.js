@@ -14,6 +14,7 @@ const theme = {
   purpleBtnColor: '#532FD0',
   mainH1GrayColor: '#303535',
   mainH4GrayColor: '#717C8A',
+  CarouselBackgroudColor: '#f6f6f6',
   CarouselBackgroudColor: '#f6f6f6de',
   CarouselCardColor: '#303535',
   StoryGrayColor: '#C8D3E1',
@@ -22,6 +23,8 @@ const theme = {
   UserViewDarkGrayColor: '#373F49',
   UserViewPurpleColor: '#7B59E2',
   UserViewBackGrdgroudColor: 'linear-gradient(180deg, #72A2FF 0%, #7C66FB 100%)',
+  ExperienceBlueColor: '#0587FE',
+  ExperienceGrayColor: '#9EA8AA',
   grdText: `background: linear-gradient(to right, #72a4ff, #7d65fb);
   -webkit-background-clip: text;
   background-clip: text;
