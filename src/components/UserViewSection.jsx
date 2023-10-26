@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import PointHand from '../assets/images/point-hand.png';
@@ -6,7 +6,6 @@ import CheckMark from '../assets/images/check-mark.png';
 
 import { breakpoints } from '../styles/theme';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper';
 import 'swiper/css';
 
 const UserViewSection = () => {
@@ -28,8 +27,6 @@ const UserViewSection = () => {
           <Swiper
             direction={'vertical'}
             loop={true}
-            modules={[Pagination]}
-            pagination={{ clickable: true }}
             centeredSlides={true}
             spaceBetween={15}
             slidesPerView={2.3}
