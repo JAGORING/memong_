@@ -19,6 +19,9 @@ const theme = {
   StoryGrayColor: '#C8D3E1',
   StoryGray2Color: '#B7C6D9',
   StoryGray3Color: '#9A9A9A',
+  UserViewDarkGrayColor: '#373F49',
+  UserViewPurpleColor: '#7B59E2',
+  UserViewBackGrdgroudColor: 'linear-gradient(180deg, #72A2FF 0%, #7C66FB 100%)',
   grdText: `background: linear-gradient(to right, #72a4ff, #7d65fb);
   -webkit-background-clip: text;
   background-clip: text;

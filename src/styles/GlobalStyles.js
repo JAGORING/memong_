@@ -50,6 +50,25 @@ const GlobalStyles = createGlobalStyle`
         width: calc(var(--vw, 1vw) * 100);
         height: calc(var(--vh, 1vh) * 100);
     }
+    .flex-row {
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    &.start{
+    justify-content: left;
+    align-items: start;
+    }
+}
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &.start{
+        justify-content: left;
+        align-items: start;
+        }
+    }
 `;
 
 export default GlobalStyles;
