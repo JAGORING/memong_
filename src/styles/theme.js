@@ -19,6 +19,22 @@ const theme = {
   StoryGrayColor: '#C8D3E1',
   StoryGray2Color: '#B7C6D9',
   StoryGray3Color: '#9A9A9A',
+  grdText: `background: linear-gradient(to right, #72a4ff, #7d65fb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;`,
+  aboveMobile: `
+    display: none;
+    ${breakpoints.small} {
+      display: block;
+    }
+  `,
+  aboveDevice: `
+    display: none;
+    ${breakpoints.medium} {
+      display: block;
+    }
+  `,
 };
 
 export default theme;

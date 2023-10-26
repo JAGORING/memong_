@@ -90,10 +90,7 @@ const SectionBox = styled.section`
       color: ${(props) => props.theme.mainH1GrayColor};
     }
     .grd_text {
-      background: linear-gradient(to right, #72a4ff, #7d65fb);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+      ${(props) => props.theme.grdText}}
     }
   }
 
@@ -206,10 +203,7 @@ const SectionBox = styled.section`
         display: inline-block;
         font-weight: 900;
         font-size: 2rem;
-        background: linear-gradient(to right, #72a4ff, #7d65fb);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
+       ${(props) => props.theme.grdText}}
         ${breakpoints.medium} {
           font-size: 1.2rem;
         }
