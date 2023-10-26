@@ -75,10 +75,6 @@ export default UserViewSection;
 const Section = styled.section`
   background: ${(props) => props.theme.UserViewBackGrdgroudColor};
   padding: 80px 0;
-  ${breakpoints.medium} {
-  }
-  ${breakpoints.small} {
-  }
 
   .title {
     width: 240px;
@@ -270,18 +266,21 @@ const SlidePoints = styled.div`
     }
     ${breakpoints.small} {
       .point-desc {
+        width: 320px !important;
+
         padding-left: 20px;
         &:not(:first-of-type) {
           margin-top: 20px;
         }
-        &.active {
-          width: 320px;
-          border-radius: 10px;
-          padding: 10px 20px;
+          box-shadow: 0px 10px 20px 0px #6b66e33d;
+          background-color: #ffffff33;
+          
+          height: 100%;
+          border-radius: 10px !important;
+          padding: 10px 20px !important;
           .point-desc-title {
             font-weight: 700;
           }
-        }
         .point-desc-title {
           gap:5px;
           img {
@@ -291,11 +290,15 @@ const SlidePoints = styled.div`
           font-size: 0.9rem;
           font-weight: 700;
           p {
+              display: block;
             margin: 5px 0 0;
             font-size: 0.56rem;
             line-height: 13px;
           }
         }
+      }
+        
+        
   }
 `;
 
