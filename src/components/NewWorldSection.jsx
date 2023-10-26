@@ -6,6 +6,6 @@ import GoogleBadge from '../assets/images/google-play-badge.png';
 import { breakpoints } from '../styles/theme';
 
 const NewWorldSection = () => {
-  return <Section></Section>;
+  return <section></section>;
 };
 export default NewWorldSection;
