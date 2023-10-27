@@ -53,7 +53,7 @@ const ExperienceSection = () => {
       </TitleBox>
       <Category>
         <div className="new flex-row">NEW</div>
-        <div className="items flex-row">
+        <div className="items">
           {['간편하게 앱 시작하기', '견적내기', '채팅하기', '계약하기', '프로필 관리'].map((item, index) => (
             <div
               key={index}
@@ -67,15 +67,17 @@ const ExperienceSection = () => {
       </Category>
       <SlideContent>
         <div className="flex-row">
-          <div className="overlay left"></div>
-          <div className="content-area flex-row">
+          <div className="content-area flex-row left">
+            <div className="overlay left"></div>
             {currentSlideIndex === 3 ? (
               <>
                 <img className="left-img" src={Phone_Chatting1} />
                 <img className="left-img" src={Phone_Chatting2} />
               </>
             ) : (
-              <img className="left-img" src={leftImageArray[currentSlideIndex]} />
+              <div>
+                <img className="left-img" src={leftImageArray[currentSlideIndex]} />
+              </div>
             )}
           </div>
           <div className="content-area">
@@ -123,17 +125,19 @@ const ExperienceSection = () => {
             <div className="next-btn" onClick={() => swiperRef.current.swiper.slideNext()} />
             <div className="swiper-custom-pagination flex-row" />
           </div>
-          <div className="content-area flex-column">
+          <div className="content-area right">
+            <div className="overlay right"></div>
             {currentSlideIndex === 1 ? (
-              <>
+              <div>
                 <img className="right-img" src={Phone_AppStart2_1} />
                 <img className="right-img" src={Phone_AppStart2_2} />
-              </>
+              </div>
             ) : (
-              <img className="right-img" src={rightImageArray[currentSlideIndex]} />
+              <div>
+                <img className="right-img" src={rightImageArray[currentSlideIndex]} />
+              </div>
             )}
           </div>
-          <div className="overlay right"></div>
         </div>
       </SlideContent>
     </Section>
@@ -202,17 +206,10 @@ const Category = styled.div`
     font-weight: 700;
     font-size: 1.25rem;
     color: ${(props) => props.theme.ExperienceBlueColor};
-    ${breakpoints.medium} {
-      font-size: 1rem;
-    
-    }
-    ${breakpoints.small} {
-      width: 80px;
-      height: 28px
-      font-size: 0.75rem;
-    }
   }
   .items {
+    display: flex;
+    flex-direction: row;
     gap: 12px;
   }
   .category {
@@ -222,29 +219,38 @@ const Category = styled.div`
     font-size: 1.25rem;
     color: ${(props) => props.theme.ExperienceGrayColor};
     background-color: ${(props) => props.theme.CarouselBackgroudColor};
-
     &.active {
       background-color: ${(props) => props.theme.purpleBtnColor};
       color: ${(props) => props.theme.whiteColor};
     }
   }
   ${breakpoints.medium} {
+    margin-top: 60px;
   }
   ${breakpoints.small} {
+    width: 320px;
+    margin-top: 40px;
+
+    .new {
+      width: 60px;
+      height: 24px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+    }
     .items {
-      overflow-x: scroll; 
-      gap: 10px; 
+      overflow-x: scroll;
+      gap: 10px;
     }
     .category {
       font-weight: 500;
       white-space: nowrap;
       font-size: 0.875rem;
-      padding: 6px 12px; 
+      padding: 8px 14px;
     }
   }
 `;
 const SlideContent = styled.div`
-  width: 100%;
+  width: 90%;
   margin-top: 60px;
   .overlay {
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.0001) 0%, #ffffff 74.13%);
@@ -260,29 +266,67 @@ const SlideContent = styled.div`
     }
   }
   .content-area {
+    position: relative;
     flex: 1;
     flex-shrink: 1;
-    max-width: 45%;
+    max-width: 35%;
+    img {
+      object-fit: contain;
+    }
+    &.left {
+      display: flex;
+      align-items: left;
+      justify-content: flex-end;
+      padding-right: 20px;
+    }
+    &.right {
+      display: flex;
+      flex-direction: column;
+      align-items: right;
+      justify-content: flex-end;
+      padding-left: 20px;
+    }
   }
   .swiper {
-    width: 600px;
+    max-width: 85%;
+    width: 85%;
+    min-width: 70%;
+    .point-item {
+      width: 345px;
+      height: 675px;
+      img {
+        width: 100%;
+      }
+    }
     ${breakpoints.medium} {
-      width: 460px;
-      height: 225px;
+      min-width: 100%;
+      width: 100%;
+      .point-item {
+        width: 270px;
+        height: 537px;
+      }
     }
     ${breakpoints.small} {
-      width: 320px;
-      height: 150px;
+      .point-item {
+        width: 200px;
+        height: 400px;
+      }
     }
   }
   .left-img {
-    max-width: 100%;
-    height: auto;
+    ${breakpoints.medium} {
+      width: 100%;
+    }
   }
-  .swiper-slide {
+  .right-img {
+    ${breakpoints.medium} {
+      width: 100%;
+    }
+    ${breakpoints.small} {
+    }
   }
-
   .swiper-button-prev {
+    ${(props) => props.theme.onlyPC}
     background-image: url('images/arrow_L.png');
     background-size: contain;
     background-position: 50% 60%;
@@ -291,6 +335,7 @@ const SlideContent = styled.div`
     height: 40px;
   }
   .swiper-button-next {
+    ${(props) => props.theme.onlyPC}
     background-image: url('images/arrow_R.png');
     background-size: contain;
     background-position: 50% 60%;
@@ -303,6 +348,9 @@ const SlideContent = styled.div`
     content: '';
   }
   .swiper-custom-pagination {
+    ${breakpoints.small} {
+      display: none;
+    }
     margin-top: 20px;
     height: 10px;
     gap: 5px;
@@ -321,8 +369,26 @@ const SlideContent = styled.div`
     }
   }
   ${breakpoints.medium} {
+    width: 100%;
+    .overlay {
+      width: 200px;
+      height: 430px;
+    }
+    .content-area {
+      &.left {
+        padding-right: 30px;
+      }
+      &.right {
+        padding-left: 30px;
+      }
+    }
   }
   ${breakpoints.small} {
+    margin-top: 30px;
+    .overlay {
+      width: 70px;
+      height: 400px;
+    }
   }
 `;
 

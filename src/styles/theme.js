@@ -41,6 +41,15 @@ const theme = {
       display: block;
     }
   `,
+  onlyPC: `
+  display: block;
+  ${breakpoints.medium} {
+    display: none;
+  }
+  ${breakpoints.small} {
+    display: none;
+  }
+`,
 };
 
 export default theme;
