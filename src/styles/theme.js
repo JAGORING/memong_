@@ -25,6 +25,7 @@ const theme = {
   UserViewBackGrdgroudColor: 'linear-gradient(180deg, #72A2FF 0%, #7C66FB 100%)',
   ExperienceBlueColor: '#0587FE',
   ExperienceGrayColor: '#9EA8AA',
+  UsePlanCardWhiteColor: '#FFFBF0',
   grdText: `background: linear-gradient(to right, #72a4ff, #7d65fb);
   -webkit-background-clip: text;
   background-clip: text;
