@@ -35,9 +35,11 @@ const ExperienceSection = () => {
   const handleSlideChange = (swiper) => {
     setCurrentSlideIndex(swiper.activeIndex % 5);
   };
-  useEffect(() => {
-    console.log('currentSlideIndexcurrentSlideIndex ', currentSlideIndex);
-  }, [currentSlideIndex]);
+  const handleCategoryClick = (index) => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.slideTo(index);
+    }
+  };
   return (
     <Section className="flex-column">
       <TitleBox>
@@ -55,6 +57,7 @@ const ExperienceSection = () => {
           {['간편하게 앱 시작하기', '견적내기', '채팅하기', '계약하기', '프로필 관리'].map((item, index) => (
             <div
               key={index}
+              onClick={() => handleCategoryClick(index + 1)}
               className={`category ${index + 1 === (currentSlideIndex !== 0 ? currentSlideIndex : 5) ? 'active' : ''}`}
             >
               {item}
@@ -259,6 +262,7 @@ const SlideContent = styled.div`
   .content-area {
     flex: 1;
     flex-shrink: 1;
+    max-width: 45%;
   }
   .swiper {
     width: 600px;
