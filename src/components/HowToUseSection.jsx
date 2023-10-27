@@ -63,7 +63,7 @@ export default HowToUseSection;
 const Section = styled.section`
   background: linear-gradient(
     116.1deg,
-    #ffffff 56.19%,
+    #ffffff 26.19%,
     rgba(113, 163, 255, 0.7) 77.74%,
     rgba(124, 100, 250, 0.8) 86.97%
   );

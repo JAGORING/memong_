@@ -250,7 +250,7 @@ const Category = styled.div`
   }
 `;
 const SlideContent = styled.div`
-  width: 90%;
+  width: 100%;
   margin-top: 60px;
   .overlay {
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.0001) 0%, #ffffff 74.13%);
@@ -267,9 +267,14 @@ const SlideContent = styled.div`
   }
   .content-area {
     position: relative;
+    overflow-x: hidden;
     flex: 1;
     flex-shrink: 1;
     max-width: 35%;
+    ${breakpoints.small} {
+      max-width: 50%;
+      flex: 3;
+    }
     img {
       object-fit: contain;
     }
@@ -278,6 +283,9 @@ const SlideContent = styled.div`
       align-items: left;
       justify-content: flex-end;
       padding-right: 20px;
+      ${breakpoints.small} {
+        flex: 1;
+      }
     }
     &.right {
       display: flex;
@@ -285,6 +293,9 @@ const SlideContent = styled.div`
       align-items: right;
       justify-content: flex-end;
       padding-left: 20px;
+      ${breakpoints.small} {
+        flex: 1;
+      }
     }
   }
   .swiper {
@@ -384,7 +395,7 @@ const SlideContent = styled.div`
     }
   }
   ${breakpoints.small} {
-    margin-top: 30px;
+    margin-top: 40px;
     .overlay {
       width: 70px;
       height: 400px;
