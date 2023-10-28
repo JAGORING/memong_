@@ -43,7 +43,7 @@ function App() {
       <UserViewSection />
       <ExperienceSection />
       <HowToUseSection />
-      {/* <RecruitmentSection /> */}
+      <RecruitmentSection />
       <Banner1 />
       <SharePortfolioSection />
       <NewMediaSection />
