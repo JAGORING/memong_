@@ -164,7 +164,7 @@ export default SharePortfolioSection;
 
 const Section = styled.section`
   background-color: ${(props) => props.theme.whiteColor};
-  padding: 100px 20px 20px;
+  padding: 100px 20px 50px;
   display: flex;
   justify-content: center;
   gap: 15%;
