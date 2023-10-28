@@ -77,13 +77,13 @@ const SectionBox = styled.section`
     }
     h1 {
       font-weight: 900;
-      font-size: 3.5rem;
+      font-size: 3.75rem;
       color: ${(props) => props.theme.StoryGrayColor};
       ${breakpoints.medium} {
         font-size: 2rem;
       }
       ${breakpoints.small} {
-        font-size: 26px;
+        font-size: 1.625rem;
       }
     }
     h1:nth-child(2) {
@@ -98,41 +98,49 @@ const SectionBox = styled.section`
     margin-top: 60px;
     background-color: ${(props) => props.theme.StoryBoxBackgroudColor};
     border-radius: 22px;
-    padding: 40px 30px;
+    padding: 40px 30px 0;
     display: flex;
     flex-direction: row;
-    ${breakpoints.medium} {
-    }
     ${breakpoints.small} {
-      min-height: 460px;
+
+    margin-top: 40px;
+      min-height: 480px;
       flex-direction: column;
+      align-items:center;
+      justify-content:space-between;
     }
+    
     align-items: start;
     overflow: hidden;
     .text-group {
-      flex: 5.5;
+      width:60%;
+      padding-bottom: 30px;
       ${breakpoints.small} {
-        flex: 1;
+      padding-bottom: 0;
+        width:100%;
       }
       h4 {
         font-weight: 800;
-        font-size: 2.6rem;
+        font-size: 3rem;
         color: ${(props) => props.theme.StoryGray2Color};
+        &:first-of-type {
+          margin-bottom: 25px;
+        }
+        :not(:first-of-type) {
+          margin-top: 10px;
+          color: ${(props) => props.theme.mainH1GrayColor};
+          ${breakpoints.medium} {
+            margin-top: 5px;
+          }
+        }
         ${breakpoints.medium} {
           font-size: 1.6rem;
         }
         ${breakpoints.small} {
-          font-size: 26px;
-        }
-      }
-      h4:first-of-type {
-        margin-bottom: 25px;
-      }
-      h4:not(:first-of-type) {
-        margin-top: 10px;
-        color: ${(props) => props.theme.mainH1GrayColor};
-        ${breakpoints.medium} {
-          margin-top: 5px;
+          font-size: 1.6rem;
+          &:first-of-type {
+            margin-bottom: 10px;
+          }
         }
       }
       p {
@@ -146,31 +154,37 @@ const SectionBox = styled.section`
           line-height: 1.8rem;
         }
         ${breakpoints.small} {
+        margin-top: 20px;
+          
           font-size: 14px;
           line-height: 16px;
         }
       }
     }
     .phone-imgs {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex: 4.5;
+     width:30%;
+     height: 100%;
       position: relative;
-      width: 100%;
-      height: 100%;
+      transform: translateX(-60px);
+      display: flex;
+      align-items: flex-end; 
+      justify-content:center;
       ${breakpoints.small} {
-        flex: 5.5;
+        width:100%;
+        height:300px;
       }
       .back,
       .front {
         position: absolute;
-        top: 0;
+        top:0;
         left: 0;
+        bottom:0;
         img {
           width: 248px;
+          height: 300px;
           ${breakpoints.small} {
-            width: 165px;
+            min-width: 140px;
+            min-height: 300px;
           }
         }
       }
@@ -220,7 +234,7 @@ const SectionBox = styled.section`
           font-size: 1.1rem;
         }
         ${breakpoints.small} {
-          font-size: 16px;
+          font-size: 1rem;
         }
       }
       p:first-of-type {

@@ -16,30 +16,44 @@ const CardCarousel = () => {
       <Swiper
         className="mySwiper"
         loop={true}
+        slidesPerView={2.1}
+        spaceBetween={0}
         modules={[Autoplay]}
-        autoplay={{ delay: 0 }}
+        autoplay={{ delay: 500 }}
         centeredSlides={true}
-        speed={5000}
+        speed={2000}
         breakpoints={{
-          260: {
-            slidesPerView: 2,
-            spaceBetween: 5,
-          },
-          360: {
-            slidesPerView: 2.6,
-            spaceBetween: 10,
+          500: {
+            slidesPerView: 2.8,
+            spaceBetween: 0,
           },
           767: {
-            slidesPerView: 3.5,
-            spaceBetween: 20,
+            slidesPerView: 1.8,
+            spaceBetween: 0,
+          },
+          900: {
+            slidesPerView: 2.4,
+            spaceBetween: 0,
           },
           1200: {
-            slidesPerView: 3.4,
+            slidesPerView: 2.5,
             spaceBetween: 10,
           },
-          1850: {
-            slidesPerView: 3.5,
-            spaceBetween: 15,
+          1500: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+          },
+          1650: {
+            slidesPerView: 3.2,
+            spaceBetween: 0,
+          },
+          1800: {
+            slidesPerView: 3.4,
+            spaceBetween: 0,
+          },
+          1900: {
+            slidesPerView: 3.6,
+            spaceBetween: 0,
           },
         }}
       >
@@ -69,18 +83,30 @@ const CarouselContainer = styled.div`
   .swiper-slide {
     display: flex;
     justify-content: center;
-    &.swiper-slide-active .card {
-      ${breakpoints.large} {
-        width: 500px !important;
-        height: 600px !important;
-      }
-      ${breakpoints.medium} {
-        width: 400px !important;
-        height: 480px !important;
-      }
-      ${breakpoints.small} {
-        width: 200px !important;
-        height: 200px !important;
+    &.swiper-slide-active {
+      .card {
+        width: 500px;
+        height: 600px;
+        ${breakpoints.medium} {
+          width: 380px;
+          height: 400px;
+          div {
+            max-height: 150px;
+            img {
+              height: 100%;
+            }
+          }
+        }
+        ${breakpoints.small} {
+          width: 200px;
+          height: 200px;
+          div {
+            max-height: 100px;
+            img {
+              height: 100%;
+            }
+          }
+        }
       }
     }
   }
@@ -93,21 +119,18 @@ const Card = styled.div`
   font-weight: 700;
   display: flex;
   flex-direction: column;
-  margin: 0 20px;
-  ${breakpoints.large} {
-    padding: 0 50px;
-    width: 500px !important;
-    height: 500px !important;
-  }
+  padding: 0 50px;
+  width: 500px;
+  height: 500px;
   ${breakpoints.medium} {
     padding: 0 30px;
-    width: 400px !important;
-    height: 400px !important;
+    width: 350px;
+    height: 350px;
   }
   ${breakpoints.small} {
     padding: 0 20px;
-    width: 160px !important;
-    height: 160px !important;
+    width: 160px;
+    height: 160px;
   }
 
   h4 {
@@ -116,7 +139,7 @@ const Card = styled.div`
     font-size: 1.4rem;
     color: #ffffffb2;
     ${breakpoints.medium} {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
     ${breakpoints.small} {
       padding-top: 35px;
@@ -131,7 +154,7 @@ const Card = styled.div`
     color: ${(props) => props.theme.whiteColor};
     ${breakpoints.medium} {
       padding-top: 25px;
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
     ${breakpoints.small} {
       padding-top: 15px;
@@ -155,12 +178,18 @@ const Card = styled.div`
       height: auto;
     }
     ${breakpoints.medium} {
-      margin-top: 30px;
-      height: 200px;
+      margin-top: 40px;
+      max-height: 150px;
+      img {
+        height: 100%;
+      }
     }
     ${breakpoints.small} {
       margin-top: 10px;
-      height: 60px;
+      max-height: 60px;
+      img {
+        height: 100%;
+      }
     }
   }
 `;
