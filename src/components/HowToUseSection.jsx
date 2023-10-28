@@ -197,7 +197,7 @@ const PlanCard = styled.div`
   }
 
   ${breakpoints.medium} {
-    width: 100%;
+    width: 580px;
     height: 450px;
 
     .title {
@@ -233,7 +233,9 @@ const PlanCard = styled.div`
   }
   ${breakpoints.small} {
     width: 100%;
-    height: 280px;
+    max-width: 580px;
+    min-height: 280px;
+    max-height: 300px;
     border-radius: 9px;
 
     .content {
