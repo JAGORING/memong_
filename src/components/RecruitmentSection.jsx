@@ -278,6 +278,11 @@ const SwiperContent = styled.div`
           font-size: 1.5rem;
         }
       }
+      .content-img {
+        img {
+          max-height: 450px;
+        }
+      }
     }
   }
 `;

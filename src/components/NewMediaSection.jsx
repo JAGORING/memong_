@@ -110,7 +110,7 @@ const Section = styled.section`
     }
   }
   ${breakpoints.small} {
-    padding: 80px 0;
+    padding: 80px 0 20px;
     .confirm-btn {
       background-color: #eaeded;
       border: none;
