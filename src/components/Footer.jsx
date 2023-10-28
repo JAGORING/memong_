@@ -97,7 +97,69 @@ const Footer = () => {
         </div>
       </PcFooter>
 
-      <MoFooter>Mo</MoFooter>
+      <MoFooter>
+        <div className="contacts-wrap">
+          <div className="contact-infos">
+            <div className="contact-info">
+              <h2 className="info-title">고객센터</h2>
+              <p className="info-number">02-543-6686</p>
+              <div className="info-item">
+                <span>가능시간</span>
+                <p>평일 09:00 ~ 18:00 / 점심시간 12:00~13:30</p>
+              </div>
+              <div className="info-item">
+                <span>대표 메일</span>
+                <p className="blue-text">hello@meemong.com</p>
+              </div>
+              <div className="info-item">
+                <span>고객센터</span>
+                <p className="blue-text">02-543-6686</p>
+              </div>
+            </div>
+
+            <div className="contact-btns">
+              <div>FAQ</div>
+              <div>1:1 문의</div>
+              <div>공지사항</div>
+            </div>
+          </div>
+
+          <div className="memong-infos">
+            <div className="info-list">
+              <h5>미몽컴퍼니 사업자 정보</h5>
+              <div className="info-item">
+                <span>주소</span>
+                <p>서울시 강남구 논현동 78-21, 102호 미몽컴퍼니</p>
+              </div>
+              <div className="info-item">
+                <span>대표이사</span>
+                <p>유주호</p>
+              </div>
+              <div className="info-item">
+                <span>사업자 등록번호</span>
+                <p>
+                  370-87-02039 <span className="blue-text">사업자정보확인</span>
+                </p>
+              </div>
+              <div className="info-item">
+                <span>
+                  개인정보관리
+                  <br /> 책임자
+                </span>
+                <p>장혜진</p>
+              </div>
+            </div>
+            <div className="services">
+              <p>서비스 이용약관</p>
+              <p>개인정보 보호 및 처리방침</p>
+            </div>
+            <div className="copyright">Copyright ©2022 meemong Company All Rights Reserved.</div>
+          </div>
+        </div>
+        <div className="footer-box">
+          <div className="start-btn">무료로 시작하기</div>
+        </div>
+      </MoFooter>
     </>
   );
 };
@@ -253,17 +315,148 @@ padding-bottom: 150px;
     display: none;
   }
 `;
-const MoFooter = styled.footer`
-  display: none;
-  ${breakpoints.small} {
-    display: block;
-  }
-`;
-
 const Divider = styled.div`
   width: 1px;
   height: 12px;
   opacity: 0.3;
   background: #808080;
   margin: 0 10px;
+`;
+const MoFooter = styled.footer`
+  display: none;
+  ${breakpoints.small} {
+    display: block;
+    background-color: #eaeded;
+
+    .contacts-wrap {
+      padding: 30px 20px 40px;
+      .contact-infos {
+        color: #303535;
+        .contact-info {
+          .info-title {
+            font-weight: 500;
+            font-size: 0.875rem;
+            margin-bottom: 10px;
+          }
+          .info-number {
+            font-weight: 700;
+            font-size: 1.375rem;
+            margin-bottom: 15px;
+          }
+          .info-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-weight: 400;
+            font-size: 0.75rem;
+
+            &:not(:last-of-type) {
+              margin-bottom: 10px;
+            }
+            span {
+              width: 80px;
+              display: inline-block;
+              opacity: 0.4;
+              margin-right: 20px;
+            }
+            .blue-text {
+              color: #1252f4;
+            }
+          }
+        }
+        .contact-btns {
+          margin-top: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 400;
+            font-size: 0.75rem;
+            background-color: #fff;
+            width: 100px;
+            height: 26px;
+            border-radius: 5px;
+          }
+        }
+      }
+
+      .memong-infos {
+        margin-top: 30px;
+        h5 {
+          font-weight: 500;
+          font-size: 0.875rem;
+          color: #303535;
+          margin-bottom: 20px;
+        }
+        .info-item {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          font-weight: 400;
+          font-size: 0.75rem;
+
+          &:not(:last-of-type) {
+            margin-bottom: 10px;
+          }
+          span {
+            width: 80px;
+            display: inline-block;
+            opacity: 0.4;
+            margin-right: 20px;
+          }
+          .blue-text {
+            opacity: 1;
+            color: #1252f4;
+            text-decoration: underline;
+          }
+        }
+      }
+      .services {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        p {
+          color: #303535;
+          font-weight: 500;
+          font-size: 0.75rem;
+        }
+      }
+      .copyright {
+        margin-top: 5px;
+        color: #303535;
+        opacity: 0.4;
+        font-weight: 400;
+        font-size: 0.625rem;
+      }
+    }
+  }
+
+  .footer-box {
+    width: 100%;
+    height: 80px;
+    box-shadow: -2px 0px 20px 0px #0000000f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .start-btn {
+      width: 320px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #6840f2;
+      border-radius: 5px;
+
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.125rem;
+    }
+  }
 `;
