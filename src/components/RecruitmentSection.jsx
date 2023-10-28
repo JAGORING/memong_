@@ -12,10 +12,7 @@ import DetailModel from '../assets/images/detail-model.png';
 import { breakpoints } from '../styles/theme';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper';
 import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 const RecruitmentSection = () => {
   return (
