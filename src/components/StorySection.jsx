@@ -211,6 +211,7 @@ const SectionBox = styled.section`
     ${breakpoints.small} {
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 40px;
+    padding: 0 20px;
     }
     .point {
       h5 {
