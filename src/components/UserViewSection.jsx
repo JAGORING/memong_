@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import PointHand from '../assets/images/point-hand.png';
 import CheckMark from '../assets/images/check-mark.png';
+import Heart from '../assets/images/Heart_suit.png';
 
 import { breakpoints } from '../styles/theme';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -40,6 +41,7 @@ const UserViewSection = () => {
             <SwiperSlide className="flex-row">
               <div className="point-item flex-row">
                 <span>2</span> 포트폴리오 관리와 자랑을 한번에
+                <img src={Heart} alt="Heart" style={{ marginLeft: '5px' }} />
               </div>
             </SwiperSlide>
             <SwiperSlide className="flex-row">
@@ -173,6 +175,7 @@ const SlidePoints = styled.div`
         font-weight: 700;
         color: ${(props) => props.theme.UserViewPurpleColor};
         margin-right: 20px;
+        
       }
       font-size: 1.875rem;
       font-weight: 500;
@@ -191,6 +194,10 @@ const SlidePoints = styled.div`
         }
         font-size: 1rem;
         font-weight: 400;
+        img {
+         width:20px;
+         height:20px; 
+        }
       }
     }
   }
