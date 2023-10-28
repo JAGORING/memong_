@@ -6,6 +6,7 @@ const breakpoints = {
 
 const theme = {
   whiteColor: '#FFFFFF',
+  blackColor: '#000000',
   StoryBoxBackgroudColor: '#F2F2F2',
   adBanner1Color: '#0F59F4',
   adBanner2Color: '#44B089',
@@ -26,6 +27,7 @@ const theme = {
   ExperienceBlueColor: '#0587FE',
   ExperienceGrayColor: '#9EA8AA',
   UsePlanCardWhiteColor: '#FFFBF0',
+  BannerGrayColor: '#80888A',
   grdText: `background: linear-gradient(to right, #72a4ff, #7d65fb);
   -webkit-background-clip: text;
   background-clip: text;

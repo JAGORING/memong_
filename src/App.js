@@ -8,7 +8,8 @@ import ExperienceSection from './components/ExperienceSection';
 import HowToUseSection from './components/HowToUseSection';
 import RecruitmentSection from './components/RecruitmentSection';
 import UserViewSection from './components/UserViewSection';
-import Banner from './components/Banner';
+import Banner1 from './components/Banner1';
+import Banner2 from './components/Banner2';
 import SharePortfolioSection from './components/SharePortfolioSection';
 import NewMediaSection from './components/NewMediaSection';
 import BeginnerSection from './components/BeginnerSection';
@@ -42,12 +43,12 @@ function App() {
       <UserViewSection />
       <ExperienceSection />
       <HowToUseSection />
-      <RecruitmentSection />
-      <Banner />
+      {/* <RecruitmentSection /> */}
+      <Banner1 />
       <SharePortfolioSection />
       <NewMediaSection />
       <BeginnerSection />
-      <Banner />
+      <Banner2 />
       <Footer />
     </>
   );

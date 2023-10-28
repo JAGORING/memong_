@@ -5,10 +5,10 @@ import Note from '../assets/images/image_note.png';
 
 import { breakpoints } from '../styles/theme';
 
-const Banner = () => {
+const Banner2 = () => {
   return <Box className="flex-column"></Box>;
 };
-export default Banner;
+export default Banner2;
 
 const Box = styled.div`
   background-color: #c8d3e1;
