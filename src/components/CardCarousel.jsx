@@ -7,7 +7,6 @@ import Contract from '../assets/images/img_계약서.png';
 import Calendar from '../assets/images/img_calendar.png';
 import { breakpoints } from '../styles/theme';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper';
 import 'swiper/css';
 
 const CardCarousel = () => {
@@ -18,10 +17,10 @@ const CardCarousel = () => {
         loop={true}
         slidesPerView={2.1}
         spaceBetween={0}
-        modules={[Autoplay]}
-        autoplay={{ delay: 500 }}
+        // modules={[Autoplay]}
+        // autoplay={{ delay: 500 }}
         centeredSlides={true}
-        speed={2000}
+        // speed={2000}
         breakpoints={{
           500: {
             slidesPerView: 2.8,
@@ -157,7 +156,7 @@ const Card = styled.div`
       font-size: 1.8rem;
     }
     ${breakpoints.small} {
-      padding-top: 15px;
+      padding-top: 10px;
       font-size: 16px;
     }
   }
@@ -185,7 +184,7 @@ const Card = styled.div`
       }
     }
     ${breakpoints.small} {
-      margin-top: 10px;
+      margin-top: 5px;
       max-height: 60px;
       img {
         height: 100%;
