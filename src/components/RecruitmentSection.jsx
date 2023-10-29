@@ -152,6 +152,16 @@ const Title = styled.div`
     color: ${(props) => props.theme.StoryGray3Color};
   }
   ${breakpoints.medium} {
+    h1 {
+      font-weight: 700;
+      font-size: 2.68rem;
+      line-height: 50px;
+    }
+    p {
+      margin-top: 10px;
+      font-size: 1.18rem;
+      line-height: 20px;
+    }
   }
   ${breakpoints.small} {
     justify-content: left;
@@ -162,7 +172,6 @@ const Title = styled.div`
       line-height: 30px;
     }
     p {
-      margin-top: 10px;
       font-size: 0.875rem;
       line-height: 20px;
       br {
