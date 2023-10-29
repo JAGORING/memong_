@@ -12,7 +12,8 @@ const BeginnerSection = () => {
       <Title>
         <h1>
           특별 할인.
-          <br /> <span className="grd-text">입문자</span> <span className="black-text">를 위한 혜택.</span>
+          <br /> <span className="grd-text">입문자</span>
+          <span className="black-text">를 위한 혜택.</span>
         </h1>
       </Title>
 
@@ -52,15 +53,16 @@ const BeginnerSection = () => {
 export default BeginnerSection;
 
 const Section = styled.section`
-  padding: 180px 0;
+  padding: 160px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   ${breakpoints.medium} {
+    padding: 100px 0 120px;
   }
   ${breakpoints.small} {
-    padding: 180px 20px 100px;
+    padding: 100px 20px 100px;
   }
 `;
 
@@ -82,6 +84,9 @@ const Title = styled.div`
   }
 
   ${breakpoints.medium} {
+    h1 {
+      font-size: 2.68rem;
+    }
   }
   ${breakpoints.small} {
     align-self: start;
@@ -170,6 +175,7 @@ const CardBox = styled.div`
     }
   }
   ${breakpoints.medium} {
+    margin-top: 60px;
     flex-direction: column;
     gap: 30px;
   }
@@ -178,8 +184,8 @@ const CardBox = styled.div`
 
     .card {
       padding: 0px 20px;
-      width: 320px;
-      height: 200px;
+      max-width: 350px;
+      max-height: 230px;
       .card-text {
         h5 {
           font-size: 0.6875rem;

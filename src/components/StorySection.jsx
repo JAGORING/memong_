@@ -58,9 +58,9 @@ const SectionBox = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 90px 0;
+  padding: 120px 0;
   ${breakpoints.medium} {
-    padding: 50px 10px;
+    padding: 80px 10px;
   }
   .story-title {
     width: 100%;
@@ -126,9 +126,9 @@ const SectionBox = styled.section`
         &:first-of-type {
           margin-bottom: 25px;
         }
-        :not(:first-of-type) {
-          margin-top: 10px;
+        &:not(:first-of-type) {
           color: ${(props) => props.theme.mainH1GrayColor};
+          margin-top: 10px;
           ${breakpoints.medium} {
             margin-top: 5px;
           }
@@ -154,8 +154,7 @@ const SectionBox = styled.section`
           line-height: 1.8rem;
         }
         ${breakpoints.small} {
-        margin-top: 20px;
-          
+        margin-top: 15px;
           font-size: 14px;
           line-height: 16px;
         }
@@ -204,14 +203,17 @@ const SectionBox = styled.section`
   }
 
   .story-points {
-    margin-top: 50px;
+    margin-top: 65px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 50px;
+    ${breakpoints.medium} {
+      grid-gap: 35px;
+    }
     ${breakpoints.small} {
       grid-template-columns: repeat(1, 1fr);
-      grid-gap: 40px;
-    padding: 0 20px;
+      grid-gap: 30px;
+    padding: 0 12px;
     }
     .point {
       h5 {
@@ -223,7 +225,7 @@ const SectionBox = styled.section`
           font-size: 1.2rem;
         }
         ${breakpoints.small} {
-          font-size: 24px;
+          font-size: 1.3rem;
         }
       }
       p {

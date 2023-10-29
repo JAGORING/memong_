@@ -147,10 +147,6 @@ export default ExperienceSection;
 
 const Section = styled.section`
   padding: 100px 15px;
-  ${breakpoints.medium} {
-  }
-  ${breakpoints.small} {
-  }
 `;
 const TitleBox = styled.div`
   h1 {
@@ -213,6 +209,7 @@ const Category = styled.div`
     gap: 12px;
   }
   .category {
+    cursor: pointer;
     border-radius: 20px;
     padding: 16px 18px;
     font-weight: 700;

@@ -3,18 +3,14 @@ import reset from 'styled-reset';
 
 const GlobalStyles = createGlobalStyle`
 
-@font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
+
     ${reset}
     a{
         text-decoration: none;
         color: inherit;
     }
     *{
+        font-family: Pretendard,'Noto Sans KR', sans-serif;
         box-sizing: border-box;
         -ms-overflow-style: none;
         scrollbar-width: none;
@@ -31,7 +27,7 @@ const GlobalStyles = createGlobalStyle`
         vertical-align: baseline;
     }
     body{
-        font-family: "Pretendard-Regular", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+        font-family: "Pretendard", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
         line-height: 1;
         vertical-align: baseline;
         background-color: #FFFFFF;

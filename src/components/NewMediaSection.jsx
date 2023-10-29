@@ -110,7 +110,7 @@ const Section = styled.section`
     }
   }
   ${breakpoints.small} {
-    padding: 80px 0 20px;
+    padding: 60px 0 20px;
     .confirm-btn {
       background-color: #eaeded;
       border: none;
@@ -220,10 +220,10 @@ const SwiperContent = styled.div`
     width: 700px;
   }
   ${breakpoints.small} {
-    width: 320px;
+    width: 340px;
     .swiper-slide {
       img {
-        width: 250px;
+        width: 280px;
       }
     }
   }

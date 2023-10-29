@@ -100,7 +100,8 @@ const CarouselContainer = styled.div`
           width: 200px;
           height: 200px;
           div {
-            max-height: 100px;
+            margin-top: 15px;
+            max-height: 90px;
             img {
               height: 100%;
             }
@@ -127,6 +128,7 @@ const Card = styled.div`
     height: 350px;
   }
   ${breakpoints.small} {
+    transform: scale(1);
     padding: 0 20px;
     width: 160px;
     height: 160px;
@@ -184,7 +186,7 @@ const Card = styled.div`
       }
     }
     ${breakpoints.small} {
-      margin-top: 5px;
+      margin-top: 10px;
       max-height: 60px;
       img {
         height: 100%;
