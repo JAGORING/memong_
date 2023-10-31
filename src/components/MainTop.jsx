@@ -21,7 +21,12 @@ const MainTop = () => {
       <h4>당신의 상상력과 전문성을 담아보세요</h4>
       <div className="badges-wrap">
         <div className="google">
-          <img src={GoogleBadge} alt="Google Play Badge" />
+        <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
+        <img src={GoogleBadge} alt="Google Play Badge" />
+    </a>
+          
+
+
         </div>
         <div className="app-store">
           <img src={AppStoreBadge} alt="Download on the App Store" />
