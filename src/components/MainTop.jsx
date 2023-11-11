@@ -21,7 +21,7 @@ const MainTop = () => {
       <h4>당신의 상상력과 전문성을 담아보세요</h4>
       <div className="badges-wrap">
         <div className="google">
-        <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
+        <a href="https://play.google.com/store/apps/details?id=com.meemong.second&pcampaignid=web_share" target="_blank" rel="noopener noreferrer">
         <img src={GoogleBadge} alt="Google Play Badge" />
     </a>
           
@@ -29,7 +29,9 @@ const MainTop = () => {
 
         </div>
         <div className="app-store">
+        <a href="https://apps.apple.com/kr/app/%EB%AF%B8%EB%AA%BD-%EB%8B%B9%EC%8B%A0%EB%8F%84-%ED%97%A4%EC%96%B4%EB%AA%A8%EB%8D%B8/id1572588554?l=en-GB" target="_blank" rel="noopener noreferrer">
           <img src={AppStoreBadge} alt="Download on the App Store" />
+          </a>
         </div>
       </div>
       <div className="memong-brands">
