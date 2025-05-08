@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 
 import Phone_AppStart from '../assets/images/experience/phone_app_start.png';
@@ -28,7 +28,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const ExperienceSection = () => {
-  const [swiper, setSwiper] = useState();
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const swiperRef = useRef(null);
 
@@ -71,12 +70,12 @@ const ExperienceSection = () => {
             <div className="overlay left"></div>
             {currentSlideIndex === 3 ? (
               <>
-                <img className="left-img" src={Phone_Chatting1} />
-                <img className="left-img" src={Phone_Chatting2} />
+                <img className="left-img" src={Phone_Chatting1} alt="예시 사진" />
+                <img className="left-img" src={Phone_Chatting2} alt="예시 사진" />
               </>
             ) : (
               <div>
-                <img className="left-img" src={leftImageArray[currentSlideIndex]} />
+                <img className="left-img" src={leftImageArray[currentSlideIndex]} alt="예시 사진" />
               </div>
             )}
           </div>
@@ -93,7 +92,6 @@ const ExperienceSection = () => {
               className="mySwiper"
               slidesPerView={1}
               onSlideChange={handleSlideChange}
-              onSwiper={setSwiper}
             >
               <SwiperSlide className="flex-row">
                 <div className="point-item flex-row">
@@ -129,12 +127,12 @@ const ExperienceSection = () => {
             <div className="overlay right"></div>
             {currentSlideIndex === 1 ? (
               <div>
-                <img className="right-img" src={Phone_AppStart2_1} />
-                <img className="right-img" src={Phone_AppStart2_2} />
+                <img className="right-img" src={Phone_AppStart2_1} alt="예시 사진" />
+                <img className="right-img" src={Phone_AppStart2_2} alt="예시 사진" />
               </div>
             ) : (
               <div>
-                <img className="right-img" src={rightImageArray[currentSlideIndex]} />
+                <img className="right-img" src={rightImageArray[currentSlideIndex]} alt="예시 사진" />
               </div>
             )}
           </div>
