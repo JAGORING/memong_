@@ -138,7 +138,7 @@ const Box = styled.div`
 
   h2 {
     font-weight: 900;
-    font-size: 5.6rem;
+    font-size: 5rem;
     color: ${(props) => props.theme.StoryGrayColor};
     line-height: 150px;
     .grd-text {
